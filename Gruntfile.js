@@ -30,12 +30,13 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     reloadr: {
-      main: {
-        watch: [
-          'test/**/*',
-          'tasks/*.js'
-        ]
-      }
+      main: [
+        'test/**/*',
+        'tasks/*.js'
+      ],
+      all: [
+        '**/*'
+      ]
     },
 
     // Unit tests.

@@ -20,13 +20,13 @@ module.exports = function(grunt) {
     var self = this;
     var done = this.async();
 
-    if (typeof this.data.watch == 'string') {
-      this.data.watch = [this.data.watch];
+    if (typeof this.data == 'string') {
+      this.data = [this.data];
     }
 
-    reloadr.start(this.data.watch, function() {
+    reloadr.start(this.data, function() {
       grunt.log.writeln('LiveReload server started');
-      grunt.log.writeln('Watching: '+self.data.watch.join(', '));
+      grunt.log.writeln('Watching: '+self.data.join(', '));
     });
 
     reloadr.changed(function(filepath) {
