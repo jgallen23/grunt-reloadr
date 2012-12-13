@@ -18,7 +18,6 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('reloadr', 'LiveReload grunt plugin', function() {
 
     var self = this;
-    var done = this.async();
 
     if (typeof this.data == 'string') {
       this.data = [this.data];
